@@ -1,0 +1,18 @@
+b(i) diffrentiation using numpy
+import numpy as np
+
+# Define the function
+def f(x):
+    return x**2 - x - 2
+
+# Define the derivative using central difference method
+def derivative_central(f, x, h=1e-5):
+    return (f(x + h) - f(x - h)) / (2 * h)
+
+# Point at which we want to find the derivative
+x_point = 1.5
+
+# Calculate the derivative
+derivative_at_x = derivative_central(f, x_point)
+
+print(f"The derivative of f(x) at x = {x_point} is approximately {derivative_at_x}")
